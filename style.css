@@ -49,7 +49,7 @@ content: "";
 }
 #menu ul li{
   position: relative;
-    dispaly:block;
+    display:block;
   float: left;
   width:auto;
   height:auto;
@@ -63,7 +63,7 @@ content: "";
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
-  heigth: 36px;
+  height: 36px;
   box-sizing: border-box;
   color: black;
 }
@@ -78,7 +78,7 @@ content: "";
 }
 
 #menu ul li:hover ul{
-  dispaly: block;
+  display: block;
   
 }
 
@@ -88,13 +88,13 @@ content: "";
 }
 
 #menu ul li ul li a{
-  dispaly: block;
+  display: block;
     text-transform: none;
-  heigth: auto;
+  height: auto;
   padding: 7px 25px;
   width: 100%;
   box-sizing: border-box;
-  borber-top: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
   color: rgb(0, 0, 0);
 }
 
@@ -105,4 +105,63 @@ content: "";
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
   font-weight: 300
+}
+
+#menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: relative;
+}
+
+header:hover #menu,
+#menu:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+header {
+  position: relative;
+  padding-bottom: 20px; /* Увеличиваем область наведения */
+}
+
+#menu ul li ul {
+  position: absolute;
+  top: 36px;
+  left: 0px;
+  display: none;
+  width: 200px;
+  background: #38b6ff;
+  z-index: 20;
+}
+
+#menu ul li:hover ul {
+  display: block;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header:hover #menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+header::after {
+  content: "↓ Наведите сюда для меню ↓";
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  font-style: italic;
 }
