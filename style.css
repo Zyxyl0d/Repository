@@ -1,0 +1,108 @@
+.footer-column {
+  flex: 50%;
+  margin: 20px;
+}
+header, footer {
+  background-color: aqua;
+  padding: 10px;
+}
+main {
+  padding: 10px;
+  background-color: silver;
+}
+.post {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+}
+.post img {
+  margin: 20px;
+}
+
+.footer-columns {
+  display: flex;
+}
+#menu{
+  position: relative;
+  display:block;
+  width:100%;
+  height:auto;
+  z-index:10;
+}
+#menu > ul::after{
+display:block;
+width:100%;
+height:0px;
+clear: both;
+content: "";
+}
+#menu ul{
+  position: relative;
+  margin:0px;
+  padding:0px;
+  display:block;
+  width:100%;
+  height:auto;
+  list-style:none;
+}
+#menu ul li{
+  position: relative;
+    dispaly:block;
+  float: left;
+  width:auto;
+  height:auto;
+}
+
+#menu ul li a{
+  display:block;
+  padding: 9px 25px 0px 25px;
+  font-size: 14px;
+  line-height: 1.3 em;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  heigth: 36px;
+  box-sizing: border-box;
+  color: black;
+}
+
+#menu ul il ul{
+  position: absolute;
+  top: 36px;
+  left: 0px;
+  display: none;
+  width: 200px;
+  background: #38b6ff;
+}
+
+#menu ul li:hover ul{
+  dispaly: block;
+  
+}
+
+#menu ul li ul li{
+  float: none;
+  width:100%;
+}
+
+#menu ul li ul li a{
+  dispaly: block;
+    text-transform: none;
+  heigth: auto;
+  padding: 7px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  borber-top: 1px solid #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+#menu ul li ul li:first-child a{
+  border-top:0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300
+}
